@@ -51,3 +51,23 @@
 - How well can you analyze the problem?
 - Design alternatives
 - Trade-offs (Time vs. space)
+
+## Big O
+- Time complexity (asymptotic runtime)
+  - Best case, worst case, expected case
+- Space complexity (memory)
+  - Array of size n => O(n)
+  - Array of size n^2^ => O(n^2^)
+  - In recursion, each successive call could add level to stack space
+- Amortized time when adding to arrays
+  - add(), or "append", is:
+    - O(1) for add-without-increasing-capacity, and
+    - O(n) for add-with-increasing-capacity
+    - amortized time complexity of a single add operation is O(1)
+    - rare O(n) gets diluted with more O(1)'s
+    - therefore, on average, a single add is O(1)
+  - add(index, E), or "insert", is:
+    - single operation O(n)
+    - if triggers array-grow, then it's
+    - O(n) + O(n) [grow + insert]
+    - which is O(n)
