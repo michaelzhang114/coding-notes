@@ -71,3 +71,17 @@
     - if triggers array-grow, then it's
     - O(n) + O(n) [grow + insert]
     - which is O(n)
+- Log(n) runtime
+  - Number of elements in problem space halves each time
+- Recursive function calls
+  - Time is likely O(branches^depth^)
+```
+  void PrintUnorderedList(int[] array) {
+    for(int i = 0; i < array.length; i++) {
+      for(int j = i + 1; j < array.length; j++) {
+        //print (i,j)
+      }
+    }
+  }
+```
+
