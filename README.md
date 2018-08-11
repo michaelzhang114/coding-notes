@@ -75,7 +75,7 @@
   - Number of elements in problem space halves each time
 - Recursive function calls
   - Time is likely O(branches^depth^)
-```
+```java
   void PrintUnorderedList(int[] array) {
     for(int i = 0; i < array.length; i++) {
       for(int j = i + 1; j < array.length; j++) {
